@@ -70,7 +70,7 @@ def main():
     soup_primary = transfer_to_soup("general/product.html")
     product = soup_primary.find("div", class_="node-content").find_all("li")
     all_product_category = to_dict(product)
-
+# ######### сделаем пока парсинг для ограниченного количества страниц, дабы не получить бан :)
     count = 0
     for item_name in all_product_category:
         if count < 2:
